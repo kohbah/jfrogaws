@@ -21,7 +21,7 @@ pipeline {
     stage('Deploy Image') {
       steps{
         script {
-          docker.withRegistry( '', jfrogaws ) {
+          docker.withRegistry( 'http://10.0.1.113:8081.jfrog.io/artifactory', jfrogaws ) {
             dockerImage.push()
           }
         }
