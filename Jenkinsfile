@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "https://10.0.1.113:8081/artifactory/nodeapp"
+    registry = "https://10.0.1.113:8081/artifactory/docker"
     registryCredential = 'jfrogaws'
     dockerImage = ''
   }
