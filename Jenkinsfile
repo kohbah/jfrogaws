@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "artifactory/docker"
+    registry = "artifactory/nodeapp"
     registryCredential = 'jfrogaws'
     dockerImage = ''
   }
@@ -21,7 +21,7 @@ pipeline {
     stage('Deploy Image') {
       steps{
         script {
-          docker.withRegistry( 'http://10.0.1.113:8081.jfrog.io/artifactory', jfrogaws ) {
+          docker.withRegistry( 'jfrog-aws', jfrogaws ) {
             dockerImage.push()
           }
         }
