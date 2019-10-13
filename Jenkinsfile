@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "artifactory/nodeapp"
+    registry = "jfrog-aws"
     registryCredential = 'jfrogaws'
     dockerImage = ''
   }
